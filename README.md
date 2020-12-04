@@ -1,2 +1,2 @@
-# kymco
+# KYMCO WEB
 Kymco Webpage Responsive
