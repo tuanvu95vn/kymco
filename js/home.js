@@ -68,6 +68,24 @@ jQuery(document).ready(function(){
             wrapAround: true
           });
     })
+    
+    //-change numb page
+    $(".img-wrap .item").on('pointerup', function () {
+        setTimeout(function () {
+            //change text
+            text = $('.text-wrap')
+            text.removeClass('active')
+            $(text[flMission.selectedIndex]).addClass('active')
+        }, 10)
+    });
+
+    $(".btn-control").click(function () {
+        //change text
+        // alert('a')
+        text = $('.text-wrap')
+        text.removeClass('active')
+        $(text[flMission.selectedIndex]).addClass('active')
+    })
 })
 
 

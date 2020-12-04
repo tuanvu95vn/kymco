@@ -20,22 +20,29 @@ $(window).scroll(function () {
     hSlider = $('.slider').outerHeight();
     hBanner = $('.bannertop .img').outerHeight();
     hBannerProduct = $('.head .banner').outerHeight();
+    hTopTech = $('.techpage .top').outerHeight();
 
     var scrollTop = $(window).scrollTop();
     if (scrollTop >= hSlider - hHeader) {
         $('header').css("background-color", "#000")
-        // $header.style.opacity = "0.5"
+       
     }
     else if (scrollTop >= hBannerProduct - hHeader) {
         $('header').css("background-color", "#000")
-        // $header.style.opacity = "0.5"
+       
     }
     else if (scrollTop >= hBanner - hHeader) {
         $('header').css("background-color", "#000")
-        // $header.style.opacity = "0.5"
+       
+    }
+    else if (scrollTop >= hTopTech - hHeader) {
+        $('.header-tech').css("background-image", "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5),rgba(0,0,0,0))")
+        $('.header-tech source').attr('srcset','img/logo.png')
     }
     else {
         $('header').css("background-color", "initial")
+        $('.header-tech').css("background-image", "initial")
+        $('.header-tech source').attr('srcset','img/logo-black.png')
     }
 
 });
